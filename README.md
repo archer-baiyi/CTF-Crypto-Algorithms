@@ -7,4 +7,4 @@ A Collection of Common Algorithms and Research Papers for CTF Cryptography Chall
 
 ## Small CRT Exponent Attack
 
-在ChatGPT的协助下，实现并优化了论文《Fast Variants of RSA》中用于证明 Lemma 的多点多项式求值分解算法，并通过代码级改进降低了运行时间与内存开销。
+实现并优化了论文《Fast Variants of RSA》中用于证明 Lemma 的多点多项式求值分解算法，并通过代码级改进降低了运行时间与内存开销。
