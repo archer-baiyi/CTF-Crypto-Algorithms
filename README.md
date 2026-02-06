@@ -2,6 +2,8 @@
 
 CTF（网络安全竞赛）密码学方向常用算法以及论文汇总。
 
+---
+
 A Collection of Common Algorithms and Research Papers for CTF Cryptography Challenges.
 
 
@@ -22,7 +24,7 @@ A Collection of Common Algorithms and Research Papers for CTF Cryptography Chall
 
 Implemented and optimized the multipoint polynomial evaluation factorization algorithm used to prove the Lemma in the paper *Fast Variants of RSA*:
 
-**Lemma.** Let $\langle N, e' \rangle$ be an RSA public key with $N = pq$. Let $d \in \mathbb{Z}$ be the corresponding RSA private exponent satisfying $d = r_1 \pmod{p - 1}$ and $d = r_2 \pmod{q - 1}$ with $r_1 < r_2$. If $r_1$ is $m$ bits long we assume that $r_1 \neq r_2 \pmod{2^{m/2}}$. Then given $\langle N, e' \rangle$ an adversary can expose the private key $d$ in time $O(\sqrt{r_1} \log r_1)$.
+> **Lemma.** Let $\langle N, e' \rangle$ be an RSA public key with $N = pq$. Let $d \in \mathbb{Z}$ be the corresponding RSA private exponent satisfying $d = r_1 \pmod{p - 1}$ and $d = r_2 \pmod{q - 1}$ with $r_1 < r_2$. If $r_1$ is $m$ bits long we assume that $r_1 \neq r_2 \pmod{2^{m/2}}$. Then given $\langle N, e' \rangle$ an adversary can expose the private key $d$ in time $O(\sqrt{r_1} \log r_1)$.
 
 , reducing runtime and memory overhead through code-level improvements.
 
