@@ -58,6 +58,12 @@ Implemented and optimized the multipoint polynomial evaluation factorization alg
 
 ### Java (`java.util.Random`)
 
+利用了 LCG 算法的状态截断缺陷。**只要提供两个连续输出**，就能通过穷举丢失的低 16 位，锁定完整的 48 位内部 Seed，从而完美模拟 Java 的 `Random` 实例，预测未来以及还原过去生成的随机数。
+
+---
+
+It exploits the state-truncation weakness of the LCG algorithm. **Given just two consecutive outputs**, you can brute-force the missing lower 16 bits to recover the full 48-bit internal seed, thereby perfectly emulating a Java `Random` instance and predicting future outputs as well as reconstructing past ones.
+
 ### C / C++ (`rand()` / `stdlib.h`)
 
 ### Python (`import random`)
@@ -66,5 +72,9 @@ Implemented and optimized the multipoint polynomial evaluation factorization alg
 
 ### Haskell (`StdGen`)
 
-利用了 SplitMix64 的可逆性。只要提供两个连续输出，就能计算出内部状态`state`和步进值`gamma`，从而完美模拟Haskell的`StdGen`，还原之前以及之后生成的随机数。
+利用了 SplitMix64 的可逆性。**只要提供两个连续输出**，就能计算出内部状态`state`和步进值`gamma`，从而完美模拟Haskell的`StdGen`，还原之前以及之后生成的随机数。
+
+---
+
+It leverages SplitMix64’s reversibility. **Given just two consecutive outputs**, you can compute the internal state `state` and the increment `gamma`, thereby perfectly emulating Haskell’s `StdGen` and reproducing the random numbers generated both before and after.
 
